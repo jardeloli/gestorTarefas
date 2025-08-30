@@ -5,7 +5,7 @@
     <ul>
         <li *ngFor="let task of tasks"> <!--para cada task ele irá gerar uma task na lista-->
             <input type="checkbox" (change)="updateTask()" [(ngModel)]="task.completed"  name="completed">
-            <a [routerLink]="['/taskDetails', task.id]" [ngClass]="task.completed? 'task-competed' : ''">{{task.name}}</a>
+            <a [routerLink]="['/taskDetails', task.id]" [ngClass]="task.completed? 'task-completed' : ''">{{task.name}}</a>
             <!--property inding do routerLink, quando cilca no taskDetails ele chama a rota pelo id-->
             <div class="button-box">
                 <button (click)="removeTask(task)">x</button> 
