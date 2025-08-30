@@ -28,6 +28,7 @@ export class TaskService {
 
   addTask(task: Task){
 
+    task.id = this.tasks.length + 1
     this.tasks.push(task);
     this.saveToLocalStorage();
 
@@ -62,7 +63,7 @@ export class TaskService {
 
   private getFromLocalStorage(): Array<Task>{
 
-    const tasksJSON =localStorage.getItem('tasks');
+    const tasksJSON = localStorage.getItem('tasks');
 
     if(!tasksJSON){
       //não achou

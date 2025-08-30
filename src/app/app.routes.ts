@@ -5,6 +5,6 @@ import { TaskFilter } from './task-filter/task-filter';
 
 export const routes: Routes = [
     {path: 'taskList', title: 'Lista de Tarefas', component: TaskList},
-    {path: 'taskDetails', title: 'Detalhes da Tarefa', component: TaskDetails},
+    {path: 'taskDetails/:id', title: 'Detalhes da Tarefa', component: TaskDetails},
     {path: '', redirectTo: 'taskList', pathMatch: 'full'}
 ];
