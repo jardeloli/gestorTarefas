@@ -16,11 +16,13 @@
     --color-purple-1: #633390;
     --color-purple-2: #220f33;
     --color-purple-3: #4b365e;
+    --color-purole-4: #160457;
 
     --color-black-1: #f9f9f9;
     --color-black-2: #f1f1f1;
     --color-black-3: #d4d4d4;
-     --color-black-4: #b4b4b4;
+    --color-black-4: #b4b4b4;
+    
 }
 
 body{
@@ -39,8 +41,12 @@ h2{
     font-size: var(--font-size-4);
 }
 
-p, a{
+p{
     color: var(--color-black-4)
+}
+
+a{
+    color: var(--color-purole-4)
 }
 
 .container{

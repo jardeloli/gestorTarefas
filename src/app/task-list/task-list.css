@@ -32,6 +32,7 @@ ul li a {
 
 ul li a.task-completed {
     text-decoration: line-through;
+    color: var(--color-black-4);
 }
 
 
@@ -73,4 +74,5 @@ form button{
     padding: 10px 15px;
     border-radius: 0 15px 15px 0 ;
     font-size: var(--font-size-2);
+    cursor: pointer;
 }
