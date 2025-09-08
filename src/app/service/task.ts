@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { Task } from '../models/task';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,10 @@ export class TaskService {
 
   getTask(): Array<Task>{
 
-    this.tasks = this.getFromLocalStorage();
-    return this.tasks
-
+     if (this.tasks.length === 0) {
+       this.tasks = this.getFromLocalStorage();
+      }
+      return this.tasks;
   }
 
   getById(id: number): Task | undefined{
@@ -55,23 +57,25 @@ export class TaskService {
 
   private saveToLocalStorage(){
 
-    const tasksJSON = JSON.stringify(this.tasks);
-
-    localStorage.setItem('tasks', tasksJSON)
-
+      if (typeof window !== 'undefined' && localStorage) {
+        const tasksJSON = JSON.stringify(this.tasks);
+        localStorage.setItem('tasks', tasksJSON);
+      }
   }
 
   private getFromLocalStorage(): Array<Task>{
+    if (typeof window !== 'undefined' && localStorage) {
+      const tasksJSON = localStorage.getItem('tasks');
 
-    const tasksJSON = localStorage.getItem('tasks');
+      if (tasksJSON) {
+        return JSON.parse(tasksJSON) as Array<Task>;
+      }
 
-    if(!tasksJSON){
-      //não achou
-      return new Array<Task>();
+      
     }
 
-    return JSON.parse(tasksJSON)
+    // Caso esteja rodando no SSR, devolve array vazio
+    return this.tasks;
+
   }
-
 }
-

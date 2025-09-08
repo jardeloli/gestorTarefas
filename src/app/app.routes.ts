@@ -3,6 +3,9 @@ import { TaskList } from './task-list/task-list';
 import { TaskDetails } from './task-details/task-details';
 import { TaskFilter } from './task-filter/task-filter';
 
+
+
+
 export const routes: Routes = [
     {path: 'taskList', title: 'Lista de Tarefas', component: TaskList},
     {path: 'taskDetails/:id', title: 'Detalhes da Tarefa', component: TaskDetails},
