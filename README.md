@@ -1,7 +1,7 @@
 Gestor de Tarefas
 
 Criei esse simples gestor de tarefas para colocar em pratica o que venho estudando sw Angular e TypeScript.
-
+Clicando na tarela, você tem as suas anotações e o status(concluida ou pendente).
 
 
 <img width="1910" height="936" alt="image" src="https://github.com/user-attachments/assets/8af180ea-237c-4f6e-8f09-12509966eede" />
