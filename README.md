@@ -1,3 +1,19 @@
+Gestor de Tarefas
+
+Criei esse simples gestor de tarefas para colocar em pratica o que venho estudando sw Angular e TypeScript.
+
+
+
+<img width="1910" height="936" alt="image" src="https://github.com/user-attachments/assets/8af180ea-237c-4f6e-8f09-12509966eede" />
+<img width="1914" height="949" alt="image" src="https://github.com/user-attachments/assets/39419b02-36d6-4ed9-a0eb-71a12cb3383d" />
+<img width="1912" height="916" alt="image" src="https://github.com/user-attachments/assets/424da921-6e49-4a4d-9313-fe00e02e752e" />
+
+
+
+
+
+
+
 # GestorTarefas
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
