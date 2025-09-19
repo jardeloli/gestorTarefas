@@ -20,6 +20,7 @@ import { RouterModule } from '@angular/router';
 export class TaskList implements OnInit, OnDestroy{
 
 
+
     constructor(private taskService: TaskService, private ngZone: NgZone){}
 
     date = new Date();
@@ -30,13 +31,18 @@ export class TaskList implements OnInit, OnDestroy{
 
     
     
-
-
+    
     tasks: Array<Task> = []; // Para manipular com o html
 
     newTask = new Task() 
     
     private intervalo: any;
+
+    get tarefasConcluidas(): number{
+      return this.tasks.filter(task => task.completed).length;
+
+    }
+
 
     ngOnInit(){
         //quando esse componete carregar na tela, vai bater na taskService buscar o getTask
