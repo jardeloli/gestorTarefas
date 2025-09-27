@@ -1,16 +1,5 @@
 <app-task-filter (taskFilter)="filterTasks($event)"></app-task-filter>
 
-<div class="tempo">
-    <span id="data">{{date | date: 'fullDate'}}</span>
-
-    
-    <span id="hr">{{hora}}</span>
-    <span id="min">{{minutos}}</span>
-    <span id="seg">{{segundos}}</span>
-
-    
-
-</div>
 <div class="container">
     <h2>Tarefas: {{ tarefasConcluidas }}/{{ tasks.length }}</h2>
     <ul>
