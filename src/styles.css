@@ -23,13 +23,15 @@
     --color-black-3: #d4d4d4;
     --color-black-4: #b4b4b4;
     --color-black-5: #0e0d0d;
+
+    --color-red-1: #fc0202;
 }
 
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, var(--color-purple-1) 15%,var(--color-purple-2) 100%);
+    background: linear-gradient(180deg, var(--color-purole-4) 15%,var(--color-purple-2) 100%);
     min-height: 100vh;
 }
 
@@ -50,6 +52,12 @@ p{
 
 a{
     color: var(--color-purole-4)
+}
+.borda{
+    border: 2px solid var(--color-black-4);
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--color-black-2);
 }
 
 .container{
