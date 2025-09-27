@@ -1,75 +1,69 @@
-Gestor de Tarefas
+Gestor de Tarefas ⭐️
 
-Criei esse simples gestor de tarefas para colocar em pratica o que venho estudando sw Angular e TypeScript.
-Clicando na tarela, você tem as suas anotações e o status(concluida ou pendente).
+Um gestor de tarefas simples e prático que eu desenvolvi. Permite adicionar tarefas, acompanhar quantas existem no total e quantas já foram finalizadas. Cada tarefa guarda a data e hora de criação na descrição e passa a ser exibida como concluída quando o usuário marca o checkbox.
+
+Funcionalidades principais
+
+Adicionar nova tarefa (texto + timestamp automático).
+
+Exibir contadores: Total de tarefas e Tarefas concluídas (atualizados em tempo real).
+
+Marcar/desmarcar tarefa como concluída via checkbox — quando marcada, a tarefa fica sinalizada como concluída.
+
+Mostrar na descrição de cada tarefa a data e hora em que foi criada.
+
+Como funciona (comportamento)
+
+O usuário digita a tarefa no campo de entrada e pressiona Enter (ou clica em Adicionar).
+
+O sistema cria um objeto de tarefa que contém:
+
+id (único)
+
+texto (descrição da tarefa)
+
+createdAt (timestamp com data e hora da criação)
+
+completed (boolean, inicia como false)
+
+A tarefa é adicionada à lista e aparece na interface com:
+
+o texto,
+
+a descrição createdAt (ex.: Criado em: 2025-09-27 01:23),
+
+um checkbox para marcar como concluída.
+
+Ao marcar o checkbox:
+
+o campo completed vira true,
+
+o estilo da tarefa muda (por exemplo: texto riscado / opacidade reduzida),
+
+os contadores Total e Concluídas são atualizados automaticamente.
 
 
-<img width="1910" height="936" alt="image" src="https://github.com/user-attachments/assets/8af180ea-237c-4f6e-8f09-12509966eede" />
-<img width="1914" height="949" alt="image" src="https://github.com/user-attachments/assets/39419b02-36d6-4ed9-a0eb-71a12cb3383d" />
-<img width="1912" height="916" alt="image" src="https://github.com/user-attachments/assets/424da921-6e49-4a4d-9313-fe00e02e752e" />
+🛠️ Ferramentas e recursos do Angular utilizados
+
+Angular CLI – para criação e gerenciamento do projeto.
+
+Components – separação da aplicação em componentes reutilizáveis (ex.: TaskListComponent, TaskItemComponent).
+
+Data Binding (Property e Event Binding) – comunicação entre template e lógica (marcar tarefa concluída, atualizar contadores).
+
+Directives (*ngFor, *ngIf) – renderização condicional e listagem dinâmica das tarefas.
+
+Two-Way Data Binding ([(ngModel)]) – para capturar o texto da tarefa no formulário.
+
+Event Handling ((click), (change)) – controle de ações do usuário, como adicionar tarefa e marcar checkbox.
+
+Services – para centralizar a lógica de manipulação da lista de tarefas (opcional, caso tenha implementado).
+
+Angular Forms (Template-driven) – captura e validação simples do input de nova tarefa.
+
+<img width="1909" height="931" alt="image" src="https://github.com/user-attachments/assets/2feb23ae-1cac-4675-b343-92073c9e90f7" />
+<img width="1896" height="934" alt="image" src="https://github.com/user-attachments/assets/fa09c143-bffc-4fbf-8228-8cc75d1d8608" />
+<img width="1899" height="923" alt="image" src="https://github.com/user-attachments/assets/f2ba77c3-9da7-4122-9458-c44056c49ac9" />
+<img width="1899" height="926" alt="image" src="https://github.com/user-attachments/assets/ede84ce5-25c8-4a16-b921-3adc43366181" />
 
 
-
-
-
-
-
-# GestorTarefas
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
