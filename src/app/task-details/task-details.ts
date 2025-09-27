@@ -3,10 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Task } from '../models/task';
 import { TaskService } from '../service/task';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-task-details',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './task-details.html',
   styleUrl: './task-details.css'
 })
@@ -30,6 +31,10 @@ export class TaskDetails {
 
       if (this.task === undefined) {
         this.navigateBack();
+      }
+
+      if(!this.task?.criarData){
+        this.task!.criarData = new Date();
       }
 
     }

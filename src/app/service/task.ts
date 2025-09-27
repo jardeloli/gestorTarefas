@@ -10,6 +10,8 @@ export class TaskService {
   constructor(){ }
 
   private tasks: Array<Task> = [];
+  
+  data = new Date()
 
   getTask(): Array<Task>{
 
@@ -35,6 +37,8 @@ export class TaskService {
     this.saveToLocalStorage();
 
   }
+
+ 
 
   updateTask(){
 
