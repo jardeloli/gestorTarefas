@@ -57,32 +57,3 @@ a{
     padding: 25px 15px;
 }
 
-.tempo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 400px;
-    background: var(--color-purple-3);
-    margin: 15px auto;
-    border-radius: 15px;
-    padding: 8px 8px;
-}
-
- #hr, #min, #seg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 45px;
-    font-weight: 700;
-    color: var(--color-black-1);
-    background: var(--color-black-4);
-    margin: 5px;
-    height: 60px;
-    width: 120px;
-    border-radius: 15px;
-}
-
-#data{
-    color: var(--color-black-4);
-    font-size: 23px;
-}
