@@ -12,10 +12,10 @@ input{
     font-size: var(--font-size-4);
     padding: 10px 15px;
     border-radius: 15px;
-    background: var(--color-purple-3);
+    background: var(--color-black-1);
     max-width: 400px;
     width: 100%;
-    color: var(--color-black-1);
+    color: var(--color-purole-4);
 
 }
 
